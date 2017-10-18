@@ -2,6 +2,12 @@
 const template = require("../controllers/template.js")
 module.exports = function(app){
 
-  app.get('/', template.index);
+  app.get('/homepage', template.index);
+
+  app.get('/companyprofile/:id', template.getOne);
+
+  app.post('/homepage', template.create);
+
+  app.post('/companyprofile/:id', template.complete);
 
 }

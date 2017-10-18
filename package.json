@@ -1,10 +1,10 @@
 {
   "name": "template",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +14,14 @@
     "express": "^4.16.2",
     "knex": "^0.13.0",
     "pg": "^7.3.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/annieneedscoffee/knexMVCTemplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/annieneedscoffee/knexMVCTemplate/issues"
+  },
+  "homepage": "https://github.com/annieneedscoffee/knexMVCTemplate#readme",
+  "description": ""
 }

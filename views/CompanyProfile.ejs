@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Company Profile</title>
+    <style>
+  body{background-color: 	#ADD8E6}
+  h1{text-decoration: underline}
+  h2{text-decoration: underline}
+  h1, h2, p{text-align: center}
+  table, td{border: 1px solid black}
+  table{text-align: center}
+</style>
+  </head>
+  <body>
+    <h1>Company Profile: <%= companies.name %></h1>
+    <h2>Description:</h2>
+    <p><%= companies.description %></p>
+    <h2>Suite Number:</h2>
+    <p><%= companies.suiteNumber %></p>
+    <h2>Members:</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Position</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+          <% for(let i=0;i<members.length;i++){ %>
+        <tr>
+          <td><%= members[i].first_name %></td>
+          <td><%= members[i].last_name %></td>
+          <td><%= members[i].position %></td>
+          <td><%= members[i].email %></td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+    <form action="/companyprofile/:id" method="post">
+      <input type="text" name="first_name" placeholder="first_name">
+      <input type="text" name="last_name" placeholder="last_name">
+      <input type="text" name="position" placeholder="position">
+      <input type="text" name="email" placeholder="email">
+      <input type="submit" value="Create">
+    </form>
+  </body>
+</html>
