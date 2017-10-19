@@ -10,4 +10,7 @@ module.exports = function(app){
 
   app.post('/companyprofile/:id', template.complete);
 
+
+    app.get('/companyprofile/edit/:id', template.editOne);
+
 }

@@ -53,6 +53,7 @@ complete: function(req, res){
 
 knex('members')
 .insert({
+  company_id: req.body.company_id,
   first_name: req.body.first_name,
   last_name: req.body.last_name,
   position: req.body.position,
@@ -66,6 +67,19 @@ knex('members')
   console.error(err)
 });
 
+},
+
+//edit co
+
+editOne: function(req, res){
+  knex('companies')
+    .where('id', req.params.id)
+    .then((result)=>{
+      res.render('EditCo',{companies: result[0]})
+    })
+    .catch((err)=>{
+      console.error(err)
+    });
 },
 
   }

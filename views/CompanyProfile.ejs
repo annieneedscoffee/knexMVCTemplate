@@ -18,6 +18,8 @@
     <p><%= companies.description %></p>
     <h2>Suite Number:</h2>
     <p><%= companies.suiteNumber %></p>
+    <h2>Company ID:</h2>
+    <p name="company_id"><%= companies.id %></p>
     <h2>Members:</h2>
     <table>
       <thead>
@@ -35,15 +37,19 @@
           <td><%= members[i].last_name %></td>
           <td><%= members[i].position %></td>
           <td><%= members[i].email %></td>
+          <td><a href="#">Edit</a></td>
+          <td><a href="#">Delete</a></td>
         </tr>
         <% } %>
       </tbody>
     </table>
+    <h2>Add a Member: </h2>
     <form action="/companyprofile/:id" method="post">
-      <input type="text" name="first_name" placeholder="first_name">
-      <input type="text" name="last_name" placeholder="last_name">
-      <input type="text" name="position" placeholder="position">
-      <input type="text" name="email" placeholder="email">
+      First Name: <input type="text" name="first_name" placeholder="first_name">
+      Last Name: <input type="text" name="last_name" placeholder="last_name">
+      Position: <input type="text" name="position" placeholder="position">
+      Email: <input type="text" name="email" placeholder="email">
+      Company ID: <input type="integer" name="company_id" value="<%= companies.id %>">
       <input type="submit" value="Create">
     </form>
   </body>

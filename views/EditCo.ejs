@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edit Company</title>
+    <style>
+    body{
+      background-color: #99ff99
+    }
+      * {
+        text-align: center,
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/companyprofile/edit/:id" method="post">
+
+
+    <h1>Company Profile: <%= companies.name %>  <input type="text" name="name" placeholder="name"></h1>
+    <h2>Description:</h2>
+    <p><%= companies.description %>  <input type="text" name="description" placeholder="description"></p>
+    <h2>Suite Number:</h2>
+    <p><%= companies.suiteNumber %>  <input type="integer" name="suiteNumber" placeholder="suiteNumber"></p>
+    <h2>Company ID:</h2>
+    <p name="company_id"><%= companies.id %></p>
+      <input type="submit" value="Submit">
+</form>
+  </body>
+</html>
